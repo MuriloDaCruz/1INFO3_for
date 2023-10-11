@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Problema: Notas
@@ -6,11 +7,21 @@
     */
 
     //Entrada
-
-
+    const notasTrim = Number(prompt('Informe quantas notas o aluno obteve no trimestre:'));
     //Processamento
+    let notas = []
+    let soma = 0 
+    for (let index = 1; index <= notasTrim; index++) {
+        let informar = Number(prompt(`Quanto o aluno tirou na prova ${index}?`));
+        notas.push(informar)
+        soma = soma + informar
+    }
+    notas.sort((a, b) => a-b)
+    let menor = notas[0]
+    let maior = notas[notas.length - 1]
+    let media = soma / notasTrim
 
-
+    alert(`A maior nota do aluno foi ${maior} \nA menor nota foi ${menor} \nE a média ficou ${media}`)
     //Saída
     /*
     Exemplo:

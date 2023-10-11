@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Problema: Números pares decrescente
@@ -6,11 +7,13 @@
     */
 
     //Entrada
-
-
+    const number = parseInt(prompt('Informe um número INTEIRO E POSITIVO'));
+    let listaNumeros = []
     //Processamento
-
-
+    for (let index = number; index >= 1; index--) {
+        listaNumeros.push(index);
+    }
+    alert(listaNumeros.join('\n'))
     //Saída
     
 

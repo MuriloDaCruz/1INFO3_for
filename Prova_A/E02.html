@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Problema: Prédios do Campus
@@ -8,11 +9,20 @@
     */
 
     //Entrada
-
-
+    let listaPredios = ["Bloco A", "Bloco B", "Bloco C", "Bloco D", "Bloco E"];
+    let Antigos = []
+    let Novos = []
     //Processamento
-
-
+    for (let index of listaPredios) {
+        const quaisBlocos = prompt(`O ${index} é novo ou antigo? \nN-Novo; A-Antigo`).toUpperCase();
+        switch (quaisBlocos) {
+            case "N": Novos.push(index)
+            break;
+            case "A": Antigos.push(index)
+            break;
+        }
+    }
+    alert(`Blocos Novos: ${Novos.join(', ')} \nBlocos Antigos: ${Antigos.join(', ')}`)
     //Saída
 
     /*

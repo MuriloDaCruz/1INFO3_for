@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     Problema: Perfil do Comprador
@@ -9,11 +10,18 @@
     */
 
     //Entrada
-
+    const quant = Number(prompt('Informe quantos Iphones foram vendidos na ultima black friday:'))
 
     //Processamento
-
-
+    let vendasPix = []
+    let vendasCartão = []
+    for (let index = 1; index <= quant; index++) {
+        const preços = Number(prompt('Informe o preço final do Iphone:'));
+        const formaPagamento = prompt('Qual foi a forma de pagamento? \nP-Pix; C-Cartão de crédito').trim().toUpperCase();
+        if (formaPagamento == "P") vendasPix.push(formaPagamento)
+        else if(formaPagamento == "N") vendasCartão.push(formaPagamento)
+    }
+    alert(`Cartão de crédito: ${vendasCartão.length} vendas e (R$${}) \nPix: ${vendasPix.length} vendas e (R$${})`)
     //Saída
 
     /*
